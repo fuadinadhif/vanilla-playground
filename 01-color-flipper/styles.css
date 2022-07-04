@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+:root {
+	--theme-bg: #f3f6fd;
+	--theme-color: #1f1c2e;
+	--theme-button: #ffffff;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 0 2rem;
+	max-width: 1100px;
+	background-color: var(--theme-bg);
+	color: var(--theme-color);
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.5;
+	transition: background-color 1s;
+}
+
+/* HEADER SECTION */
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	padding-top: 2rem;
+}
+
+h1 {
+	margin-bottom: 2rem;
+}
+
+.dot {
+	font-size: 3rem;
+	line-height: 0;
+}
+
+.dot:nth-child(1) {
+	color: #15616d;
+}
+
+.dot:nth-child(2) {
+	color: #ee4266;
+}
+
+.dot:nth-child(3) {
+	color: #bc96e6;
+}
+
+nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 1.5rem;
+	list-style-type: none;
+}
+
+li {
+	border-radius: 50px;
+	padding: 8px 32px;
+	background-color: var(--theme-button);
+	box-shadow: 0 2px 6px 0 rgb(136 148 171 / 20%),
+		0 24px 20px -24px rgb(71 82 107 / 10%);
+}
+
+a {
+	color: #1f1c2e;
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+/* MAIN SECTION */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+	position: relative;
+}
+
+.main-wrapper {
+	position: absolute;
+	top: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.color-desc-wrapper {
+	margin-bottom: 3rem;
+	border: 1px solid #1f1c2e;
+	border-radius: 10px;
+	padding: 2rem 4rem;
+	text-align: center;
+}
+
+p.desc {
+	margin-bottom: 0.5rem;
+	font-size: 1.25rem;
+}
+
+p.color-name {
+	font-size: clamp(2rem, 2.5vmin, 3.5rem);
+	font-weight: 500;
+}
+
+button {
+	border: none;
+	border-radius: 50px;
+	padding: 16px 32px;
+	width: max-content;
+	background-color: var(--theme-button);
+	color: #1f1c2e;
+	box-shadow: 0 2px 6px 0 rgb(136 148 171 / 20%),
+		0 24px 20px -24px rgb(71 82 107 / 10%);
+	font-family: inherit;
+	font-size: 1.25rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.color-btn {
+	animation: pulsate 6s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+	}
+
+	80% {
+		transform: scale(1);
+	}
+
+	85% {
+		transform: scale(1.15);
+	}
+
+	90% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 725px) {
+	header {
+		flex-direction: column;
+		align-items: center;
+	}
+}

@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #f3f6fd;
+	font-family: 'Poppins', sans-serif;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* NAV STYLE */
+nav {
+	position: relative;
+}
+
+.toggle-btn,
+.close-btn {
+	border: none;
+	background-color: transparent;
+	font-size: 2.5em;
+	cursor: pointer;
+}
+
+.toggle-btn {
+	padding: 32px 0 0 32px;
+}
+
+/* DRAWER NAV */
+.drawer-nav {
+	position: absolute;
+	top: 0;
+	width: 350px;
+	height: 100vh;
+	padding: 32px 0 0 32px;
+	background-color: #fff;
+	transform: translateX(-100%);
+	transition: all 500ms linear;
+	z-index: 1;
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 45px);
+	padding-top: 32px;
+}
+
+.main-menu {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 1em;
+}
+
+.main-menu a,
+.socmed-menu a {
+	color: #000;
+	font-size: 2em;
+}
+
+.socmed-menu {
+	padding-bottom: 2em;
+}
+
+.show-nav {
+	transform: translate(0);
+}
+
+/* DRAWER MASK */
+.drawer-mask {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: #000;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s linear;
+}
+
+.show-mask {
+	visibility: visible;
+	opacity: 0.5;
+}
+
+@media (max-width: 350px) {
+	.drawer-nav {
+		width: 100%;
+	}
+}

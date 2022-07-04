@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+main {
+	height: 100%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f1f6fd;
+}
+
+main {
+	display: grid;
+	place-items: center;
+	padding: 0 2em;
+}
+
+.card-wrapper {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 550px;
+	border-radius: 10px;
+	padding: 5em 2.5em 2.5em;
+	background-color: #fff;
+	box-shadow: 0 2px 6px 0 #f5c6cb33, 0 24px 20px -24px #f5c6cb1a;
+}
+
+.title-wrapper {
+	margin-bottom: 2em;
+}
+
+.title-wrapper .title {
+	font-size: 2em;
+}
+
+.alert-wrapper {
+	position: absolute;
+	top: 0;
+	width: 70%;
+	border-radius: 50px;
+	padding: 0.75em 1em;
+	font-size: 1em;
+	text-align: center;
+	transform: translateY(-50%);
+	transition: all 0.15s linear;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.alert-wrapper.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.danger {
+	border: 1px solid #f5c6cb;
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+.success {
+	border: 1px solid #c3e6cb;
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.form-wrapper {
+	width: 100%;
+}
+
+.form {
+	display: flex;
+	gap: 0.75em;
+}
+
+.form > * {
+	border: none;
+	font-size: 1em;
+	padding: 1rem 1.5rem;
+}
+
+.form .form-input {
+	flex-grow: 1;
+	border-radius: 50px;
+	background-color: #f1f6fd;
+}
+
+.form .form-submit-btn {
+	border-radius: 50px;
+	background-color: thistle;
+	cursor: pointer;
+}
+
+.grocery-item-wrapper {
+	margin-top: 2em;
+	width: 100%;
+	display: none;
+}
+
+.grocery-item-wrapper.show {
+	display: block;
+}
+
+.grocery-list {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 1.5em;
+}
+
+.list-title {
+	font-size: 1em;
+}
+
+.list-btn-wrapper {
+	display: flex;
+	gap: 12px;
+}
+
+.list-btn-wrapper > * {
+	border: none;
+	background-color: transparent;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.edit-btn {
+	color: powderblue;
+}
+
+.delete-btn {
+	color: lightcoral;
+}
+
+.clear-all-btn {
+	width: 100%;
+	margin-top: 1.5em;
+	border: none;
+	background-color: transparent;
+	color: lightcoral;
+	font-family: inherit;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+@media (max-width: 614px) {
+	.card-wrapper {
+		width: 100%;
+	}
+}
